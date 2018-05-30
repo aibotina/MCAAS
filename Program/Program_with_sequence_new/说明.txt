@@ -1,0 +1,10 @@
+这个程序中参数的取值情况：
+
+lam1=1e-4;
+
+lam2=lam3=2.5E-7(after normalizing the similarity matrix);
+
+Sliding_window_size=28;
+
+rank=10;
+   
