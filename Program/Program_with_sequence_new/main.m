@@ -12,7 +12,7 @@ lam3=3.28e-13;
 
 % [recMatrix,virusName] =matrixCompletion3(fileName, thresh, rank, iter, tol, norm,lam1,lam2);
 % [dataHI, virusName, serumName, reference] = readTable(fileName);
-
+%Load and normalize files
 [dataNorm,typeI, typeII,virusName, serumName] = normalizeTable(fileName,thresh,norm);
 
 [nVirus,nSerum]=size(dataNorm);
@@ -39,7 +39,7 @@ for j=1:nSerum
    else serumNameYear(j)=serumNameYear(j)+2000;
    end   
 end
-
+%Different type values in HI
 typeIcol_01=typeI(:,1);
 typeIcol_02=typeI(:,2);
 typeI_E=zeros(nVirus,nSerum);
@@ -70,7 +70,7 @@ for i=1:Count
 end
 
 
-
+%Iterate by window swipe
 rank_store=9;
 Mid=0;
 for KK=1:numel(rank_store)
